@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .bg-black {
+      background-color:white;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 10px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">
+      <img src ="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21768268_716425918546698_5036957484437701699_n.jpg?oh=09ef111c547fc22124e22e5155997c2a&oe=5A4B44FE" height="50px" width="50px";></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#events">EVENTS</a></li>
+        <li><a href="#members">MEMBERS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>S A C</h1> 
+  <p>ITS Student Activity Council</p>
+  <p>IFHE hyderabad </p>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Student activity council </h2><br>
+      <h4>The purpose of Student Activities Council is to plan and administer activities for the student body, in order to contribute to a more well-rounded social, recreational, and cultural life for the college campus and community. We provide entertaining alternatives to students with our activities and events. 
+The goal of Student Activities Council is to create a fun and exciting experience at ITS IFHE Hyderabad</h4><br>
+      <p>SAC's various committees encourage student input and participation in planning musical performances, cultural, comedy, leadership and motivational speakers and a variety of other events. Through SAC, students will develop leadership, program management, social responsibility, and interpersonal skills. Since our funds come from student money, SAC makes it a priority to organize events both appealing to students and diverse in nature.</p>
+      <h4> to get a step closer to ITS SAC click th e below button </h4>
+      <br><button class="btn btn-default btn-lg"><a href="https://www.facebook.com/sac.its2k17/" target="blank">Get in touch</a></button>
+    </div>
+    <div class="col-sm-4">
+    <img src ="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21768268_716425918546698_5036957484437701699_n.jpg?oh=09ef111c547fc22124e22e5155997c2a&oe=5A4B44FE" height="500px" width="500px";>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="events" class="container-fluid text-center">
+  <h2>EVENTS</h2>
+  <h4>What we organise</h4>
+  <h4> Mainly we organise the official events but we are good in non-official too.</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="https://i.pinimg.com/736x/99/b3/63/99b36362356317891cedfd91ac64c312--techno-festival-place.jpg" height="100px" width="100px">
+      <h4>TECHNICAL FEST</h4>
+      <p>Technical fests are one of the most awaited fest in college
+      where students gets a chance to explore there ideas and also the students of other colleges gets a chance to show there potential.</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/10469469_301615256706328_1362230273877553525_n.jpg?oh=336128efe238c53e79a2e95d381c8f71&oe=5A82893D" height="100px" width="100px">
+      <h4>KHEL</h4>
+      <p>The first official sports event of ITS which allows student to show there talent in the field of sports.
+      we organise different indoor and outdoor games for both boys and girls
+      <a href="https://www.facebook.com/KHEL-IFHE-Sports-Meet-161404620727393/" target="blank">CLICK HERE</a>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/11160006_369888953208917_4809783182020953167_n.jpg?oh=99b7f0be3956631a219445fc415ab059&oe=5A8189B5" height="100px" width="100px">
+      <h4>IMPULSE</h4>
+      <p>The second official sports meet of ITS where students will be compete each other according to there branches</p>
+      <a href="https://www.facebook.com/Impulse-10-369842779880201/">CLICK HERE</a>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-6">
+      <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-1/c33.0.200.200/p200x200/1897961_534854563279623_1769555123_n.jpg?oh=9ee0222689133a3ae92b8ac5fbb86298&oe=5A819242" height="100px" width="100px">
+      <h4>TRITI</h4>
+      <p>Triti is one of the biggest fest of ITS , basically a techno-cultural fest in which celebs are invited to provide some entertainment and share there experience of life .</p>
+      <a href="https://www.facebook.com/tritifest/">CLICK HERE</a>
+    </div>
+    <div class="col-sm-4">
+      <img src="https://2.bp.blogspot.com/-gcL8hc2cZqU/WH1_bQoFVoI/AAAAAAAABvw/Th18SihfjM0SdDFA-ZyNQi0qpv3UHJ8NQCLcB/s1600/Farewell-2.png" height="100px" width="100px">
+      <h4> FAREWELL </h4>
+      <p> One of the best event which shows the emotional bond of a senior and junior.
+      the event in which lots of giggels and stories are shared between seniors and juniors.
+      simply THE MEMORIES </p>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="members" class="text-center bg-black">
+  <h2>MEMBERS</h2><br>
+  <h4>The Backbone of SAC </h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-1/14317588_1124370274322248_6194414266065258194_n.jpg?oh=b21e496af7f88c9fa2c785cb93413727&oe=5A3FEE89" alt="Murali" width="400" height="300">
+        <p><strong>MURALI KRISHNA</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src= " https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/19510675_1091216307678867_7708148706251104176_n.jpg?oh=2506efa4e8d5c1aa6f6a1be80daa673c&oe=5A495E80"alt="Shanmukha" width="400" height="100">
+        <p><strong>SHANMUKHA</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21761374_1772221322788077_8063867059113735310_n.jpg?oh=3ac54af0f622997da3f6b9fb99c843b3&oe=5A809137" alt="Shashwat" width="400" height="300">
+        <p><strong>SHASHWAT SHREY</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/22007980_485822235111578_6663380988320475340_n.jpg?oh=fb98a8904f70087b5f7e8b1e7ac3d9f9&oe=5A39DFA3" alt="Pranav" width="400" height="300">
+        <p><strong>PRANAV CHAUDHARY</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img class="responsive" src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21687985_1406569292791988_1382722168471409502_n.jpg?oh=7a5f936b49b81715af79a2edea05545b&oe=5A39B1EA" alt="Sudhanshu" width="400" height="300">
+        <p><strong>SUDHANSHU MISHRA</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/22045905_717535318435758_9093735818500986381_n.jpg?oh=da9c6952e7e8beac8045c278f078b99d&oe=5A448669" alt="Nayan" width="400" height="300">
+        <p><strong>NAYAN JHA</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21768295_1916423161956593_8351433756613212147_n.jpg?oh=db6dbcf1ccb815352abe3b6afd1b5692&oe=5A84F6B5" alt="Karthik" width="400" height="300">
+        <p><strong>KARTHIK KRISHNA</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/22089208_717535388435751_2977397512034863781_n.jpg?oh=537287915fd11783eab83eb3ff63fd40&oe=5A3CB607" alt="Deavyansh" width="400" height="300">
+        <p><strong>DEAVYANSH GAUTAM</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-0/p206x206/19554148_1920049961616171_5589854849455275032_n.jpg?oh=0342d1ad59a1803b09fc4b758237c4e8&oe=5A4D5668" alt="San Francisco" width="400" height="300">
+        <p><strong>SANGRAM SINGH</strong></p>
+        <p>TECHNICAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21192539_955605481263280_7484087811236718574_n.jpg?oh=a45b22dadd3574ebad45a42cee77cab6&oe=5A4159F6" alt="SOURAV" width="400" height="300">
+        <p><strong>SOURAV SAHOO</strong></p>
+        <p>SPORTS TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/17342992_1256712324444234_6920227756785052855_n.jpg?oh=30d3d349110ae13108b21cd5b2a037c0&oe=5A3F9D32" alt="Anil" width="400" height="300">
+        <p><strong>ANIL </strong></p>
+        <p>SPORTS TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/16864415_1119177011541616_9038401977615078210_n.jpg?oh=47e89119e469c2802bf4d2f9ecb3d000&oe=5A42D0C7" alt="PRINCE" width="400" height="300">
+        <p><strong>PRINCE GUPTA</strong></p>
+        <p>SPORTS TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/17424845_732114736964952_4780281094959144961_n.jpg?oh=c4f03169e25af93e331860c9eac2e67e&oe=5A44D077" alt="Anshil" width="400" height="300">
+        <p><strong>ANSHIL SRIVASTAVA</strong></p>
+        <p>SPORTS TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/22008239_1989469391294813_7929306930750502192_n.jpg?oh=6286fb94e9049722f7302b9500ac2173&oe=5A5033C7" alt="Mohan" width="400" height="300">
+        <p><strong>KRISHNA MOHAN</strong></p>
+        <p>SPORTS TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21761562_1785466818148172_3140749117786806206_n.jpg?oh=f2534ebe1629e71fc3c1d198a4e9139a&oe=5A8174F6" alt="Raunak" width="400" height="300">
+        <p><strong>RAUNAL DAS</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/19731786_1425997227447617_1613959771240947693_n.jpg?oh=b7853c45937ee02ad7f631917d07d818&oe=5A434640" alt="San Francisco" width="400" height="300">
+        <p><strong>RISHIKA SINHA</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/22195690_717535628435727_405287181775215167_n.jpg?oh=b1c4964adbdc796e75c94f24f1276724&oe=5A7CCBD8" alt="RISHITHA" width="400" height="300">
+        <p><strong>RISHITHA</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/1202_912025945572468_1137343205936049299_n.jpg?oh=e4951dcd500a379d0175e739b48dba05&oe=5A83519C" alt="Sagarika" width="400" height="300">
+        <p><strong>SGARIKA REDDY</strong></p>
+        <p></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/22195241_717535651769058_5071895933804440974_n.jpg?oh=4ff76734a54e9756e3aee402cc358e9c&oe=5A4E2EEC" alt="laya" width="400" height="300">
+        <p><strong>LAYA BHARGAVI</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/21272295_1399121446867611_2334074400444680406_n.jpg?oh=9b7e90c8fed2bf30a56b4fc8f83d2c24&oe=5A4396AB" alt="SIMRAN" width="400" height="300">
+        <p><strong>SIMRAN PANDIT</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/14595723_578440009022469_8962587444444841769_n.jpg?oh=51aee399b6aaf797a8efae850c9224e0&oe=5A479153" alt="VASUNDHRA" width="400" height="300">
+        <p><strong>S VASUNDHRA</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/14355661_328410634168055_1267193236093837679_n.jpg?oh=4c0cd7d64ef6a3eb1c680247e9469cf5&oe=5A838CC6" alt="San Francisco" width="400" height="300">
+        <p><strong>NAVNI SUDARSHNAM</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/535213_1095612227157804_8624732778235048444_n.jpg?oh=49bb4816f383e41809442d5e16b07662&oe=5A3CCA4A" alt="NIDHI" width="400" height="300">
+        <p><strong>NIDHI JOHRI</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-0/p526x296/22140745_717554535100503_7278626790375243179_n.jpg?oh=de2e50110758fb25a68442fe1420c68c&oe=5A47FAB2" alt="SRAVANTHI" width="400" height="300">
+        <p><strong>SRAVANTHI</strong></p>
+        <p>CULTURAL TEAM</p>
+      </div>
+    </div>
+    </div><br>
+       
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> SAC <br> ITS <br> IFHE <br> HYDERABAD</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 7660853164 <br> 8332076581 <br> 7660841835 <br> 8521779776 </p>
+      <p><span class="glyphicon glyphicon-envelope"></span> sac2k19@gmail.com </p>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p> Web page build with the help of <a href ="https://www.w3schools.com">w3schools</a>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+</body>
+</html>
